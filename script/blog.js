@@ -1,4 +1,4 @@
-const discover= document.getElementById('Discover');
-discover.addEventListener('click', function(){
-    window.location.href= "./blog.html"
+const desk= document.getElementById('Desk');
+desk.addEventListener('click', function(){
+    window.location.href= "./index.html"
   })
