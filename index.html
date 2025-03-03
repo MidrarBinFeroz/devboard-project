@@ -43,6 +43,17 @@
     font-weight: 400;
     font-style: normal;
     }
+    
+    /* Add hover effect for the Discover button */
+    #Discover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    #Discover:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 10px 25px rgba(55, 82, 253, 0.4);
+      cursor: pointer;
+    }
   </style>
 
 
@@ -168,3 +179,4 @@
     <script src="./script/dev.js"></script>
     <script src="./script/discover.js"></script>
 </body>
+</html>
