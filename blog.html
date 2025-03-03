@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BLOG PAGE</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Google Font -->
@@ -73,11 +73,13 @@
         </div>
         <div class="bg-white rounded-lg my-4">
             <p class="w-full poppins-bold text-xl p-4 border-dashed border-b-2">Question-3: What is event delegation in the DOM?</p>
-            <p class="poppins-regular text-lg p-4 text-text">Event delegation is a technique where a parent element listens for events on its child elements instead of adding event listeners to each child.</p>
+            <p class="poppins-regular text-lg p-4 text-text">Event delegation is a powerful JavaScript pattern that leverages event bubbling to efficiently handle events on multiple elements with a single event listener.
+                Instead of attaching event handlers directly to each individual element (which can be inefficient, especially for dynamically created elements), you attach a single event listener to a parent element. When an event occurs on any child element, it bubbles up to the parent where your listener can determine which specific child triggered the event.</p>
         </div>
         <div class="bg-white rounded-lg my-4">
             <p class="w-full poppins-bold text-xl p-4 border-dashed border-b-2"> Question-4: What is event bubbling in the DOM?</p>
-            <p class="poppins-regular text-lg p-4 text-text">Event bubbling is a process in the DOM where an event starts from the target element and bubbles up to its parent elements.</p>
+            <p class="poppins-regular text-lg p-4 text-text">Event bubbling is a key concept in the Document Object Model (DOM) that describes how events propagate through nested elements in an HTML document.
+                When an event occurs on an element (like a click on a button), the event doesn't just trigger on that specific element. Instead, it first triggers on the target element, then "bubbles up" through all of its parent elements in the DOM hierarchy, triggering the same event on each ancestor element until it reaches the document root.</p>
         </div>
         <div class="bg-white rounded-lg my-4">
             <p class="w-full poppins-bold text-xl p-4 border-dashed border-b-2"> Question-5: How do you create, add, and remove elements using JavaScript?</p>
