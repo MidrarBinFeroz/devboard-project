@@ -1,11 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>devboard project</title>
-</head>     
-<body>
-        
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevBoard</title>
+  <!-- Daisy UI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <!-- Tailwind Customize -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            text:"#00303C",
+            bg: "#F4F7FF",
+            accent:"#3752FD",
+            actText: "#000000"
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    }
+    .poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    }
+    .poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    }
+  </style>
+
+
+</head>
+<body class="bg-bg">
+  <div class="container mx-auto">
+    <section class="py-6">
+      <div class="navbar bg-base-100 p-6 rounded-2xl flex justify-between items-center">
+        <div class="flex items-center gap-4">
+          <img src="./assets/logo.png" alt="Logo">
+          <a class="text-4xl text-text font-bold">DevBoard</a>
+        </div>
+        <div class="flex items-center gap-10">
+          <div class="flex gap-2 items-center bg-bg text-text px-3 py-1 rounded-full">
+            <img src="./assets/checkbox.png" alt="">
+            <p id="taskDone" class="font-bold text-3xl">23</p>
+          </div>
+          <div class="flex items-center justify-center">
+            <img id="bgColor" class="bg-bg rounded-full w-10 h-10" src="./assets/theme-btn.png" alt="Theme Button">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="grid grid-cols-5 gap-6">
+        <div class="col-span-4">
+            <div class="bg-white p-6 rounded-xl shadow-lg items-center justify-around">
+                <div class="flex items-center justify-around border-dashed border-b-2 p-4"><div class="flex items-center bg-bg rounded-lg p-6 gap-2">
+                  <img class="bg-white rounded-full p-4" src="./assets/checkbox.png" alt="">
+                  <p class="text-text poppins-medium flex flex-col">Task Assigned <strong id="taskNotDone" class="text-black poppins-bold text-3xl">06</strong></p>
+              </div>
+              <div id="Discover" class="bg-gradient-to-r from-purple-400 via-indigo-500 to-blue-300 py-5 px-20 text-white rounded-xl shadow-lg">
+                <div class="flex gap-3">
+                    <img class="border-dashed border-white border" src="./assets/board.png" alt="">
+                    <h2 class="poppins-medium text-2xl">Discover Something <br> New Today!</h2>
+                </div>
+              </div>
+              <div class="bg-bg p-6 rounded-lg flex gap-5 ">
+                  <img class="rounded-full bg-white p-5" src="./assets/calender.png" alt=""> <p class="text-text text-2xl flex flex-col poppins-regular gap-2"><span id="current-date" class="text-2xl poppins-bold mt-4">Feb 25 2025</span> 
+              </p></div></div>
+                  <div class="grid grid-cols-3">
+                   <div class="bg-bg h-80 m-7 rounded-2xl">
+                     <div class="p-6">
+                      <h3 class="bg-white p-4 w-28 h-10 flex items-center rounded-lg font-normal">ShopEase</h3>
+                      <p class="font-medium text-2xl my-4 text-text">Fix Mobile Button Issue </p>
+                      <p class="bg-white p-4 text-gray-500 rounded-lg">Debug using Chrome DevTools, check for overlapping</p>
+                     </div>
+                     <div class='flex justify-between p-4 border-dashed border-t-2'>
+                      <p class="font-medium text-lg">Deadline <br>21 March,2024</p>
+                      <button class="btn-comp btn bg-accent px-5 text-white font-medium">Completed</button>
+                     </div>
+                   </div>
+                   <div class="bg-bg h-80 m-7 rounded-2xl">
+                     <div class="p-6">
+                      <h3 class="bg-white p-4 w-28 h-10 flex items-center rounded-lg">Cloud Sync</h3>
+                      <p class="font-medium text-2xl my-4 text-text">Add Dark Mode </p>
+                      <p class="bg-white p-4 text-gray-500 rounded-lg">Debug using Chrome DevTools, check for overlapping</p>
+                     </div>
+                     <div class='flex justify-between p-4 border-dashed border-t-2'>
+                      <p class="font-medium text-lg">Deadline <br>21 March,2024</p>
+                      <button class="btn-comp btn bg-accent py-3 px-5 text-white font-medium">Completed</button>
+                     </div>
+                   </div>
+                   <div class="bg-bg h-80 m-7 rounded-2xl">
+                     <div class="p-6">
+                      <h3 class="bg-white p-4 w-28 h-10 flex items-center rounded-lg">SwiftPay</h3>
+                      <p class="font-medium text-2xl my-4 text-text">Optimize Home Page </p>
+                      <p class="bg-white p-4 text-gray-500 rounded-lg">Debug using Chrome DevTools, check for overlapping</p>
+                     </div>
+                     <div class='flex justify-between p-4 border-dashed border-t-2'>
+                      <p class="font-medium text-lg">Deadline <br>21 March,2024</p>
+                      <button class="btn-comp btn bg-accent py-3 px-5 text-white font-medium">Completed</button>
+                     </div>
+                   </div>
+                   <div class="bg-bg h-80 m-7 rounded-2xl">
+                     <div class="p-6">
+                      <h3 class="bg-white p-4 w-28 h-10 flex items-center rounded-lg">Meta</h3>
+                      <p class="font-medium text-2xl my-4 text-text">Add New Emoji🤲 </p>
+                      <p class="bg-white p-4 text-gray-500 rounded-lg">Debug using Chrome DevTools, check for overlapping</p>
+                     </div>
+                     <div class='flex justify-between p-4 border-dashed border-t-2'>
+                      <p class="font-medium text-lg">Deadline <br>21 March,2024</p>
+                      <button class="btn-comp btn bg-accent py-3 px-5 text-white font-medium">Completed</button>
+                     </div>
+                   </div>
+                   <div class="bg-bg h-80 m-7 rounded-2xl">
+                     <div class="p-6">
+                      <h3 class="bg-white p-4 w-28 h-10 flex items-center rounded-lg">Google LLC</h3>
+                      <p class="font-medium text-2xl my-4 text-text">Integrate OpenAI API </p>
+                      <p class="bg-white p-4 text-gray-500 rounded-lg">Debug using Chrome DevTools, check for overlapping</p>
+                     </div>
+                     <div class='flex justify-between p-4 border-dashed border-t-2'>
+                      <p class="font-medium text-lg">Deadline <br>21 March,2024</p>
+                      <button class="btn-comp btn bg-accent py-3 px-5 text-white font-medium">Completed</button>
+                     </div>
+                   </div>
+                   <div class="bg-bg h-80 m-7 rounded-2xl">
+                    <div class="p-6">
+                      <h3 class="bg-white p-4 w-28 h-10 flex items-center rounded-lg">Glassdoar</h3>
+                      <p class="font-medium text-2xl my-4 text-text">Improve Job searching </p>
+                      <p class="bg-white p-4 text-gray-500 rounded-lg">Debug using Chrome DevTools, check for overlapping</p>
+                     </div>
+                     <div class='flex justify-between p-4 border-dashed border-t-2'>
+                      <p class="font-medium text-lg">Deadline <br>21 March,2024</p>
+                      <button class="btn-comp btn bg-accent py-3 px-5 text-white font-medium">Completed</button>
+                     </div>
+                  </div>
+                </div>
+        </div>
+      </div>
+        <div class="bg-white p-6 rounded-xl h-full">
+                <div class="border-dashed border-b-2 w-full justify-items-center pb-4">
+                  <div class="flex gap-2">
+                    <img src="/assets/activity.png" alt=""><h2 class="font-bold text-lg gap-2"> Activity Log</h2>
+                  </div>
+                  <button id="History" class="btn bg-accent px-5 text-white font-medium mt-2">Clear History</button></div>
+                  <div id="Activity" class="poppins-regular text-actText bg-bg m-2 p-2 rounded-xl">
+
+                  </div>
+        </div>
+
+    </section>
+    <script>document.getElementById("current-date").innerHTML = new Date().toDateString();</script>
+    <script src="./script/dev.js"></script>
+    <script src="./script/discover.js"></script>
 </body>
-</html>
