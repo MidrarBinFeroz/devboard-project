@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <!-- Tailwind Customize -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            text:"#00303C",
+            bg: "#F4F7FF",
+            accent:"#3752FD",
+            actText: "#000000"
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    }
+    .poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    }
+    .poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    }
+  </style>
+</head>
+<body class="bg-bg">
+    <div class="container mx-auto">
+        <section class="py-6">
+            <div class="navbar bg-base-100 p-6 rounded-2xl flex justify-between items-center">
+                <div class="flex items-center gap-4">
+                  <img src="./assets/logo.png" alt="Logo">
+                  <a class="text-4xl text-text font-bold">DevBoard</a>
+                </div>
+                <div>
+                    <button id="Desk" class="btn bg-indigo-600 text-white">Back to Desk</button>
+                </div>
+                </div>
+              </div>
+    </section>
+    <section class="container mx-auto">
+        <div class="text-center">
+            <h1 class="poppins-bold text-4xl pb-4">Blogs</h1>
+        </div>
+        <div class="bg-white rounded-lg my-4">
+            <p class="w-full poppins-bold text-xl p-4 border-dashed border-b-2">Question-1: What are the different ways to select an element in the DOM?</p>
+            <p class="poppins-regular text-lg p-4 text-text">The different ways to select an element in DOM is: 1. getElementById("id") 2. getElementsByClassName("className") 3. getElementsByTagName("tagName") 4. querySelector("selector") 5. querySelectorAll("selector").
+            </p>
+        </div>
+        <div class="bg-white rounded-lg my-4">
+            <p class="w-full poppins-bold text-xl p-4 border-dashed border-b-2">Question-2: What is the difference between innerHTML, innerText, and textContent ?</p>
+            <p class="poppins-regular text-lg p-4 text-text">innerHTML: Retrieves the HTML content inside an element <br> innerText: Retrievesthe visible text inside an element <br> textContent:  Retrievesthe full text content inside an element, including hidden elements</p>
+        </div>
+        <div class="bg-white rounded-lg my-4">
+            <p class="w-full poppins-bold text-xl p-4 border-dashed border-b-2">Question-3: What is event delegation in the DOM?</p>
+            <p class="poppins-regular text-lg p-4 text-text">Event delegation is a technique where a parent element listens for events on its child elements instead of adding event listeners to each child.</p>
+        </div>
+        <div class="bg-white rounded-lg my-4">
+            <p class="w-full poppins-bold text-xl p-4 border-dashed border-b-2"> Question-4: What is event bubbling in the DOM?</p>
+            <p class="poppins-regular text-lg p-4 text-text">Event bubbling is a process in the DOM where an event starts from the target element and bubbles up to its parent elements.</p>
+        </div>
+        <div class="bg-white rounded-lg my-4">
+            <p class="w-full poppins-bold text-xl p-4 border-dashed border-b-2"> Question-5: How do you create, add, and remove elements using JavaScript?</p>
+            <p class="poppins-regular text-lg p-4 text-text">To create an element document.createElement(tagName) is used. <br> To add an element as last child of parent document.body.appendChild(newDiv) is used. <br>to add multiple elements parent.append(newDiv, "Additional text") is used. <br> To remove an element newDiv.remove() is used. <br> To remove a child element parent.removeChild(child) is used.</p>
+        </div>
+    </section>
+    </div>
+    <script src="./script/deskbtn.js"></script>
+</body>
+</html>
